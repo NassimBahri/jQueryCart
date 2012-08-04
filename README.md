@@ -32,6 +32,7 @@ Le code HTML de la page :
 
 ##Remarques 
 Votre panier devra être entouré par une div avec un identifiant que vous choisieez.
+
 Vous devez respecter le DOM du produit.
 
 
@@ -56,10 +57,18 @@ $(document).ready(function(){
 
 ##Exploitons le code :
 $('.add') le boutton ajouter au panier : permet de préciser que le code sera exécuté lorsqu'on clique sur un boutton portant cette classe
+
+Options : 
+
+
 		cart : le panier de votre site
+		
 		fade : true si vous voulez appliquer un effet de fadeOut lorsque le produit sera ajouté au panier
+		
 		speed : la durée de l'animation
+		
 		animation : le type de l'animation applique par d"faut 'simple'
+		
 		callback : une fonction qui sera exécuté lorsque l'animation est terminé
 
 ## Author
