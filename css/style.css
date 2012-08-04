@@ -1,0 +1,72 @@
+/**
+*@Copyright 2012
+*Développer par Nassim Bahri 13/02/2012
+*Panier plugin
+*Licence GNU-GPL
+**/
+
+/**
+*Style de la page
+**/
+body {
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+color: #666;
+padding: 40px;
+font-size: 12px;
+}
+.content
+{
+margin:0 auto;
+width:960px;
+height:550px;
+border: 1px dashed #ccc;
+padding: 10px;
+background-color: #FFFFFF;
+}
+h1 {
+margin-top: 0;
+color: #d40303;
+}
+ul.liste_produit{
+list-style:none;
+width:600px;
+}
+ul.liste_produit li{
+float:left;
+width:150px;
+height:205px;
+border:solid 1px;
+margin:10px;
+}
+div#panier{
+width:128px;
+height:128px;
+background:url(../images/panier.png);
+float:right;
+top:0;
+}
+div.image{
+width:100%;
+text-align:center;
+height:150px;
+overflow:hidden;
+margin:5px 0;
+}
+div.titre{
+width:100%;
+text-align:center;
+color: #d40303;
+font-weight:bold;
+}
+div.add_cart{
+text-align:right;
+}
+input.add{
+cursor:pointer;
+background:#fff;
+border:dashed 1px #c3c3c3;
+color:#666;
+font-weight:bold;
+margin-right:10px;
+margin-top:5px;
+}
