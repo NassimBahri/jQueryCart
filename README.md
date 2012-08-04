@@ -38,7 +38,7 @@ Vous devez respecter le DOM du produit.
 
 ##Usage
 
-L'usage de ce plugin est très simple,Il faut juster l'appliquer à votre panier
+L'usage de ce plugin est très simple,Il faut juste l'appliquer à votre panier
 
 ```html
 <script type="text/javascript">
