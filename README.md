@@ -41,6 +41,7 @@ Vous devez respecter le DOM du produit.
 L'usage de ce plugin est très simple,Il faut juster l'appliquer à votre panier
 
 ```html
+<script type="text/javascript">
 $(document).ready(function(){
 	$('.add').jQueryCart({
 		cart		:'panier',
