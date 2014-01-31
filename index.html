@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Jquerycart by NassimBahri</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Jquerycart</h1>
+        <h2>Plugin jQuery permettant d&#39;animer le panier de votre site E-commerce</h2>
+        <a href="https://github.com/NassimBahri/jQueryCart" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="a-propos" class="anchor" href="#a-propos"><span class="octicon octicon-link"></span></a>A propos</h1>
+
+<p>jQueryCart est un plugin qui vous permet d'offrir une valeur ajouté à votre site E-commerce. Ce plugin vous permet d'animer l'ajout d'un produit au panier.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>En faite, pour utiliser ce plugin vous devez inclure les fichiers suivants :</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://code.jquery.com/jquery-1.7.1.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"js/jquery_cart.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"css/style.css"</span> <span class="nt">/&gt;</span>
+</pre></div>
+
+<p>Le code HTML de la page : </p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Plugin panier jquery<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"liste_produit"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- DOM du produit --&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"image"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/prod1.jpg"</span> <span class="na">width=</span><span class="s">"100px"</span> <span class="nt">/&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"titre"</span><span class="nt">&gt;</span>Mon produit<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"add_cart"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Add to cart"</span> <span class="na">class=</span><span class="s">"add"</span> <span class="nt">/&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="c">&lt;!-- fin DOM produit --&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"panier"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<h2>
+<a name="remarques" class="anchor" href="#remarques"><span class="octicon octicon-link"></span></a>Remarques</h2>
+
+<p>Votre panier devra être entouré par une div avec un identifiant que vous choisieez.</p>
+
+<p>Vous devez respecter le DOM du produit.</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>L'usage de ce plugin est très simple,Il faut juste l'appliquer à votre panier</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'.add'</span><span class="p">).</span><span class="nx">jQueryCart</span><span class="p">({</span>
+        <span class="nx">cart</span>        <span class="o">:</span><span class="s1">'panier'</span><span class="p">,</span>
+        <span class="nx">fade</span>        <span class="o">:</span><span class="kc">false</span><span class="p">,</span>
+        <span class="nx">speed</span>       <span class="o">:</span><span class="mi">500</span><span class="p">,</span>
+        <span class="nx">animation</span>   <span class="o">:</span><span class="s1">'simple'</span><span class="p">,</span>
+        <span class="nx">callback</span>    <span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="s1">'fin animation'</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+
+<h2>
+<a name="exploitons-le-code-" class="anchor" href="#exploitons-le-code-"><span class="octicon octicon-link"></span></a>Exploitons le code :</h2>
+
+<p>$('.add') le boutton ajouter au panier : permet de préciser que le code sera exécuté lorsqu'on clique sur un boutton portant cette classe</p>
+
+<p>Options : </p>
+
+<pre><code>    cart : le panier de votre site
+
+    fade : true si vous voulez appliquer un effet de fadeOut lorsque le produit sera ajouté au panier
+
+    speed : la durée de l'animation
+
+    animation : le type de l'animation applique par d"faut 'simple'
+
+    callback : une fonction qui sera exécuté lorsque l'animation est terminé
+</code></pre>
+
+<h2>
+<a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h2>
+
+<p><a href="https://www.facebook.com/Bahri.Nassim">Nassim Bahri</a> (<a href="http://www.linkedin.com/pub/nassim-bahri/32/b38/a11">LinkedIn</a>)</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/NassimBahri/jQueryCart/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/NassimBahri/jQueryCart/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/NassimBahri/jQueryCart"></a> is maintained by <a href="https://github.com/NassimBahri">NassimBahri</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
